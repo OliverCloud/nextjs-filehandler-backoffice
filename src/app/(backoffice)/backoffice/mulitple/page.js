@@ -29,7 +29,6 @@ export default function Page() {
             body: filesData
         }).then((response) => response.json()).then((data) => console.log(data));
 
-  
 
     }
 

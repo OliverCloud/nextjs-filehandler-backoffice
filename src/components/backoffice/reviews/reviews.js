@@ -1,23 +1,23 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./affiliates.module.css";
+import styles from "./reviews.module.css";
 import Image from "next/image";
 
-const Affiliates = () => {
+const Reviews = () => {
 
-  const [affiliates, setAffiliates] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
-  const getAffiliates = async () => {
+  const getReviews = async () => {
 
-    const response = await fetch("http://localhost:3000/api/affiliates");
+    const response = await fetch("http://localhost:3000/api/reviews");
     const data = await response.json();
 
-    setAffiliates(data);
+    setReviews(data);
   };
 
   useEffect(() => {
 
-    getAffiliates();
+    getReviews();
 
   }, []);
 
@@ -25,77 +25,74 @@ const Affiliates = () => {
 
     e.preventDefault();
 
-    const { title, file } = e.target.elements;
+    const { name, file } = e.target.elements;
 
-    if (!title.value || !file.files[0]) {
+    if (!name.value || !file.files[0]) {
 
       console.log("Du mangler at tilføje en fil eller titel!");
       return;
-      
+
     }
 
     const formData = new FormData();
 
     console.log(file.files[0]);
-    
-    formData.append("title", title.value);
+    formData.append("name", name.value);
     formData.append("file", file.files[0]);
 
-  
+    console.log(formData);
 
-    let response = await fetch("http://localhost:3000/api/affiliate", {
+    let response = await fetch("http://localhost:3000/api/review", {
       method: "POST",
       body: formData,
     });
 
     let data = await response.json();
 
-    getAffiliates();
+    getReviews();
   };
 
   const handleDelete = async (e, id) => {
 
     e.preventDefault();
 
-    let response = await fetch("http://localhost:3000/api/affiliate?id=" + id, {
+    let response = await fetch("http://localhost:3000/api/review?id=" + id, {
       method: "DELETE",
     });
 
     let data = await response.json();
 
-    getAffiliates();
+    getReviews();
   };
 
   return (
     <div className={styles.container}>
-      <h2>Affiliates</h2>
+      <h2>Reviews</h2>
 
-      {affiliates.map((affiliate, index) => {
+      {reviews.map((review, index) => {
         return (
           <span key={index}>
             <Image
-              src={affiliate.imagePath}
-              alt={affiliate.title}
+              src={review.imagePath}
+              alt={review.name}
               width={100}
               height={100}
             />
-            <button onClick={(e) => handleDelete(e, affiliate._id)}>
-              Delete
-            </button>
+            <button onClick={(e) => handleDelete(e, review._id)}>Delete</button>
           </span>
         );
       })}
 
-      <h3>Add New Afiliate</h3>
+      <h3>Add New Review</h3>
 
       <form onSubmit={handleSubmit}>
         <label>
           {" "}
-          Affiliate title
+          Review title
           <input
-            type="title"
-            name="title"
-            placeholder="Affiliate Title"
+            type="name"
+            name="name"
+            placeholder="Review name"
             defaultValue={"New Partner in Food"}
           />
         </label>
@@ -109,4 +106,4 @@ const Affiliates = () => {
     </div>
   );
 };
-export default Affiliates;
+export default Reviews;

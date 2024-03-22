@@ -1,3 +1,4 @@
+import Reviews from '@/components/backoffice/reviews/reviews';
 import styles from './page.module.css';
 export default function ReviewsPage() {
 
@@ -5,6 +6,8 @@ export default function ReviewsPage() {
         <div className={styles.page}>
 
             <h1>Edit Reviews</h1>
+
+            <Reviews />
 
         </div>
     )

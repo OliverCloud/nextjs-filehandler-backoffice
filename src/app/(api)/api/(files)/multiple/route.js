@@ -7,6 +7,8 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
 
     const data = await request.formData();
+
+    console.log('multi data', data);
     const length = data.get('length');
     const folder = "multiple";
     const fileName = '';
