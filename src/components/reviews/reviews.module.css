@@ -1,0 +1,83 @@
+.container {
+    background-color: var(--color-solidPink);
+    color: #fff;
+
+    padding: 100px 0;
+}
+
+.container header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.container footer {
+    text-align: center;
+    height: 80px;
+    width: 100%;
+}
+
+.card {
+   
+    background-color: #fff;
+    border-radius: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+
+}
+
+.card .content {
+    
+    width : 60%;
+    text-align: center;
+    
+}
+
+.card .content span{
+
+    display: inline-block;
+    font-weight: 700;
+    padding: 20px 0;
+    color: var(--color-solidPink);
+    
+}
+
+.card .content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+
+/* PAGINATION */
+.pagination {
+
+    height: 40px;
+    width: 100%;
+    margin: auto auto;
+
+}
+.paginationBar {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+    gap: 8px;
+}
+.paginationDot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+.paginationDot.active {
+    opacity: 1;
+}

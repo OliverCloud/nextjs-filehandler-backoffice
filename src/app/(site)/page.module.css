@@ -1,0 +1,14 @@
+.page {
+  
+}
+
+.splitter {
+  height: 200px;
+  background-color: var(--color-solidPink);
+}
+
+.section {
+  min-height: 50vh;
+  background-color: #fff;
+  color: var(--color-solidPink)
+}

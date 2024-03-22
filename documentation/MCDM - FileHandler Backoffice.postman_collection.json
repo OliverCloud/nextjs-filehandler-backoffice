@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "1a03673b-42cb-4d67-a656-64908f9e016a",
+		"name": "MCDM - FileHandler Backoffice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17346811",
+		"_collection_link": "https://mcdmviborg.postman.co/workspace/MCDM-Boiler-Templates~3a083f64-8a60-4d6e-bb07-860691da039a/collection/17346811-1a03673b-42cb-4d67-a656-64908f9e016a?action=share&source=collection_link&creator=17346811"
+	},
+	"item": [
+		{
+			"name": "(affiliates)",
+			"item": [
+				{
+					"name": "Affiliates",
+					"item": [
+						{
+							"name": "Get All Affliates",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/affiliates",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"affiliates"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Affiliate",
+					"item": [
+						{
+							"name": "Affiliates",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/affiliates",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"affiliates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Affiliate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "New Partner in Food",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/MCDM_Courses_2023/NextJS/boilerprojects/foodera/foodera_nextjs_seed_boilerplate/public/affiliates/2.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/affiliate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"affiliate"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Affiliate",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "65fb1191d8d8812617955ed2",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "New Partner in Food",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/MCDM_Courses_2023/NextJS/boilerprojects/foodera/foodera_nextjs_seed_boilerplate/public/affiliates/3.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/affiliate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"affiliate"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Affilate",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/affiliate?id=65fb1626d8d8812617955f08",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"affiliate"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "65fb1626d8d8812617955f08"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(reviews)",
+			"item": [
+				{
+					"name": "Reviews",
+					"item": [
+						{
+							"name": "Get All Reviews",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/reviews",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"reviews"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Review",
+					"item": [
+						{
+							"name": "Add Review",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "text",
+											"value": "test tekst til review",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Lars Larsen",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/MCDM_Courses_2023/NextJS/boilerprojects/foodera/foodera_nextjs_seed_boilerplate/public/testamonials/1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/review",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Review",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/review?id=65fad846d8d8812617955e0a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"review"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "65fad846d8d8812617955e0a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Review",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "65faf75b76c3a3e610f12c41",
+											"type": "text"
+										},
+										{
+											"key": "text",
+											"value": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Maccy Doe - Front End",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/MCDM_Courses_2023/NextJS/boilerprojects/foodera/raw_materials/www/images/staff/01.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/review",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Review",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/review?id=65faf75b76c3a3e610f12c41",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"review"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "65faf75b76c3a3e610f12c41"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "(subscribers)",
+			"item": [
+				{
+					"name": "Subscribers",
+					"item": [
+						{
+							"name": "Get Subscribers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/subscribers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscribers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Subscriber By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber?id=65fb36125f2ca18b5dc06632",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "65fb36125f2ca18b5dc06632"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Subscriber By Email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber?email=anders@mediacollege.dk",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "anders@mediacollege.dk"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Subscriber",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"name\": \"Anders2ss Christensen\",\r\n        \"email\": \"anderssss2d@mediacollege.dk\",\r\n        \"message\": \"Jeg er en subscriber\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Subscriber",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Anders Christensen\",\r\n    \"email\": \"anders@mediacollege.dk\",\r\n    \"validated\" : true,\r\n    \"id\" : \"65e0b60daffba413c40ae93b\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Subscriber",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber?id=65fb3722d8d8812617955f71",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "65fb3722d8d8812617955f71"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Subscriber",
+					"item": [
+						{
+							"name": "Get Subscriber",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/subscriber",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"subscriber"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

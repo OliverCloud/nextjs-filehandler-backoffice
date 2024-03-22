@@ -1,0 +1,101 @@
+:root {
+
+  /* Global Variables */
+  --main-color: #f1f1f1;
+
+  /* Component Specific Variables */
+  --box-color: #fff;
+
+
+  --color-solidPink: black; 
+  --color-cedar: #43121d; 
+  --color-mineShaft: #262626; 
+  --color-wellRead: #A82D49; 
+  --color-abbey: #999; 
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  background-color: var(--main-color);
+
+}
+
+body {
+  background-color: var(--main-color);
+  ;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-size: 37px;
+  letter-spacing: 0;
+  line-height: 42px;
+  font-weight: 700;
+  margin: 0px 0px 25px;
+
+}
+
+h4 {
+  letter-spacing: 0;
+  font-size: 32px;
+  line-height:45px;
+  font-weight: 700;
+  margin: 15px 0px 25px;
+}
+
+.wrapper {
+  padding: 0 15px;
+  /* background-color: rgba(8, 233, 46, 1); */
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .wrapper {
+    margin: auto;
+    max-width: 1024px;
+   
+    /* padding: 0 15px; */
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 52px;
+  }
+
+  h4 {
+    font-size: 32px;
+    line-height: 52px;
+    margin: 0px 0px 25px;
+  }
+}
