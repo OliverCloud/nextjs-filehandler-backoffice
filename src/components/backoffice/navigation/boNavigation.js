@@ -6,9 +6,9 @@ const BoNavigation = () => {
             
             <Link href="/">Back to the Frontend</Link> | 
             <Link href="/backoffice/affiliates">Edit Affiliates</Link> |
-            <Link href="/backoffice/affiliates">Edit Affiliates</Link> |
             <Link href="/backoffice/reviews">Edit Reviews</Link> |
             <Link href="/backoffice/single">Single</Link>
+            <Link href="/backoffice/mulitple">Mulitple</Link>
 
         </div>
     )

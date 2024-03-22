@@ -75,16 +75,25 @@ h4 {
 
 .wrapper {
   padding: 0 15px;
-  /* background-color: rgba(8, 233, 46, 1); */
+  background-color: rgba(8, 233, 46, 1);
 }
 
+
+@media screen and (min-width: 724px) {
+
+  .wrapper {
+    background-color: red;
+  }
+
+}
 
 @media screen and (min-width: 1024px) {
 
   .wrapper {
     margin: auto;
     max-width: 1024px;
-   
+    background-color: blue;
+  
     /* padding: 0 15px; */
   }
 
@@ -99,3 +108,4 @@ h4 {
     margin: 0px 0px 25px;
   }
 }
+

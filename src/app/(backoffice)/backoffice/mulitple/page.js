@@ -7,26 +7,15 @@ export default function Page() {
 
     const onFilesChangeHandler = (target) => {
 
-        const send = async (body) => {
+        let mbody = new FormData();
+        mbody.append('length', target.files.length);
+
+        for (let i = 0; i < target.files.length; i++) {
+            // console.log(target.files[i])
+            mbody.append('files_' + i, target.files[i]);
+        }
     
-            await fetch('/api/backoffice/assets',{
-                method: 'POST',
-                body:body
-            })
-            .then((response) => response.json())
-            .then((data) => setList(data));
-        };
-
-
-            let mbody = new FormData();
-            mbody.append('length', target.files.length);
-
-            for (let i = 0; i < target.files.length; i++) {
-                // console.log(target.files[i])
-                mbody.append('files_' + i, target.files[i]);
-            }
-       
-            setFilesData(mbody);
+        setFilesData(mbody);
 
     }
 

@@ -31,7 +31,7 @@ export async function POST(request) {
     let result = await fileHandler({file, folder, fileName});
 
     let extension = file.type.split('/')[1];
-
+    extension = extension === 'jpeg' ? 'jpg' : extension;
 
     const newAffiliate = {
         title: title,

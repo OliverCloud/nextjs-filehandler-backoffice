@@ -11,7 +11,13 @@ import { useEffect, useState, useRef } from 'react';
 const Affiliates = () => {
 
     const [affiliates, setAffiliates] = useState([]);
+    // Reference til swiper elementet.
+    const swiperRef = useRef(null);
 
+    // State til at holde vinduesstørrelsen
+    const [windowDimensions, setWindowDimensions] = useState({});
+
+    
     useEffect(() => {
 
         const getAffiliates = async () => {
@@ -28,12 +34,7 @@ const Affiliates = () => {
 
     }, [])
 
-    // Reference til swiper elementet.
-    const swiperRef = useRef(null);
 
-    // State til at holde vinduesstørrelsen
-    const [windowDimensions, setWindowDimensions] = useState({});
- 
     // Håndter dynamisk ændring af vinduesstørrelse
     useEffect(() => {
         
@@ -97,9 +98,12 @@ const Affiliates = () => {
     // Template
     return (
         <div className={`${styles.container} `}>
+
             <div className={`${styles.header}`}>
                 <h3>Affiliates</h3>
             </div>
+
+
             <div className={`${styles.slider}`}>
                 <swiper-container
                         slides-per-view={2}

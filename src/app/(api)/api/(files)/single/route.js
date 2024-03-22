@@ -18,7 +18,7 @@ export async function POST(request) {
     
     let handler = await fileHandler({file, folder, fileName});
 
-    return NextResponse.json({'ok': true, 'message': 'Affiliate created'});
+    return NextResponse.json({'ok': true, 'message': 'File uploaded'});
 
     
 }

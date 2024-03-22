@@ -35,7 +35,6 @@ const Affiliates = () => {
             return;
 
         }
-
         
         const formData = new FormData();
         formData.append('title', title.value);
